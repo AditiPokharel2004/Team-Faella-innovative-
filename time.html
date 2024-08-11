@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Time</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    max-width: 1000px;
+    height: 600px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#input-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#activity-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#activity-list li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#summary {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#summary h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#summary p {
+    margin: 5px 0;
+    color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Track Your Time</h1>
+        <p>Keep track of how you spend your time during the day. Identify productive and non-productive activities to find a better balance.</p>
+        
+        <div id="time-tracking">
+            <div id="input-section">
+                <input type="text" id="activity" placeholder="Enter activity">
+                <select id="category">
+                    <option value="productive">Productive</option>
+                    <option value="non-productive">Non-Productive</option>
+                </select>
+                <button onclick="addActivity()">Add Activity</button>
+            </div>
+
+            <h2>Activities</h2>
+            <ul id="activity-list"></ul>
+
+            <div id="summary">
+                <h2>Summary</h2>
+                <p>Total Productive Time: <span id="productive-time">0</span> hours</p>
+                <p>Total Non-Productive Time: <span id="non-productive-time">0</span> hours</p>
+                <p>Balance Suggestion: <span id="suggestion">Track your activities to see suggestions.</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script >
+        let productiveTime = 0;
+let nonProductiveTime = 0;
+
+function addActivity() {
+    const activityInput = document.getElementById('activity');
+    const categorySelect = document.getElementById('category');
+    const activityList = document.getElementById('activity-list');
+
+    if (activityInput.value.trim() === '') {
+        alert('Please enter an activity.');
+        return;
+    }
+
+    const activity = activityInput.value.trim();
+    const category = categorySelect.value;
+
+    const listItem = document.createElement('li');
+    listItem.textContent = `${activity} - ${category === 'productive' ? 'Productive' : 'Non-Productive'} Time`;
+
+    if (category === 'productive') {
+        productiveTime += 1;
+    } else {
+        nonProductiveTime += 1;
+    }
+
+    updateSummary();
+    activityList.appendChild(listItem);
+
+    activityInput.value = '';
+}
+
+function updateSummary() {
+    document.getElementById('productive-time').textContent = productiveTime;
+    document.getElementById('non-productive-time').textContent = nonProductiveTime;
+
+    const suggestion = document.getElementById('suggestion');
+    if (productiveTime > nonProductiveTime) {
+        suggestion.textContent = "Great job! Keep up the productive work!";
+    } else {
+        suggestion.textContent = "Try to balance more productive activities into your day.";
+    }
+}
+
+    </script>
+</body>
+</html>

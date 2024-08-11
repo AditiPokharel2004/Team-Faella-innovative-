@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    background-image: url(https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95c5ee7db.png);
+}
+ img{
+    height: 300px;
+    width: 100%;
+
+background-position: center;
+background-size: cover;
+}
+
+.navbar {
+  background-color: cornsilk;
+  color: #6C2E43;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  text-decoration: none;/*remove underline*/
+  position: sticky;
+  
+}
+.navbar :hover {
+  text-decoration: none;
+  color: olive;
+}
+.navbar a {
+  color: #6C2E43;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+
+
+.content {
+    padding: 20px;
+    text-align: center;
+    
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.join{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    
+}
+
+  .shapes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    column-gap: 80px;
+}  
+
+.container{
+  background-color: beige;
+  padding:10px;
+  
+}
+.shapes div{
+  width: 300px;
+  height: 300px;
+  border-radius: 50% 50% 50% 50%;
+  background-color: palevioletred;
+  color:beige;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+.shapes div:hover{
+  border: solid 2px plum ;
+  background-color:plum;
+  color:black;
+  text-align: center;
+}
+
+
+
+.container1 h1 {
+  text-align: center;
+display: flex;
+  text-decoration: none;
+   margin-left: 70px;
+
+}
+
+footer {
+  background-color: #FFEEAA;
+  color: #333; 
+  padding: 20px 0;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #FF6347; /* A bright color for headers */
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons li img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+.footer-bottom a {
+  color: #FF6347;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}

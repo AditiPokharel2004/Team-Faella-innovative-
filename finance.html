@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Worksheet for Kids</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#total {
+    margin-top: 20px;
+}
+
+#total p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Financial Worksheet</h1>
+        <p>Track your earnings and spending to learn about saving money!</p>
+
+        <form>
+            <h2>Earnings</h2>
+            <label for="allowance">Allowance:</label>
+            <input type="number" id="allowance" placeholder="$0.00">
+
+            <label for="chores">Chores:</label>
+            <input type="number" id="chores" placeholder="$0.00">
+
+            <label for="gifts">Gifts:</label>
+            <input type="number" id="gifts" placeholder="$0.00">
+
+            <label for="other-earnings">Other:</label>
+            <input type="number" id="other-earnings" placeholder="$0.00">
+
+            <h2>Spending</h2>
+            <label for="toys">Toys:</label>
+            <input type="number" id="toys" placeholder="$0.00">
+
+            <label for="snacks">Snacks:</label>
+            <input type="number" id="snacks" placeholder="$0.00">
+
+            <label for="games">Games:</label>
+            <input type="number" id="games" placeholder="$0.00">
+
+            <label for="other-spending">Other:</label>
+            <input type="number" id="other-spending" placeholder="$0.00">
+
+            <h2>Total</h2>
+            <div id="total">
+                <p>Earnings: <span id="total-earnings">$0.00</span></p>
+                <p>Spending: <span id="total-spending">$0.00</span></p>
+                <p>Savings: <span id="savings">$0.00</span></p>
+            </div>
+
+            <button type="button" onclick="calculateTotals()">Calculate</button>
+        </form>
+    </div>
+
+    <script >
+        function calculateTotals() {
+    const allowance = parseFloat(document.getElementById('allowance').value) || 0;
+    const chores = parseFloat(document.getElementById('chores').value) || 0;
+    const gifts = parseFloat(document.getElementById('gifts').value) || 0;
+    const otherEarnings = parseFloat(document.getElementById('other-earnings').value) || 0;
+
+    const toys = parseFloat(document.getElementById('toys').value) || 0;
+    const snacks = parseFloat(document.getElementById('snacks').value) || 0;
+    const games = parseFloat(document.getElementById('games').value) || 0;
+    const otherSpending = parseFloat(document.getElementById('other-spending').value) || 0;
+
+    const totalEarnings = allowance + chores + gifts + otherEarnings;
+    const totalSpending = toys + snacks + games + otherSpending;
+    const savings = totalEarnings - totalSpending;
+
+    document.getElementById('total-earnings').textContent = `$${totalEarnings.toFixed(2)}`;
+    document.getElementById('total-spending').textContent = `$${totalSpending.toFixed(2)}`;
+    document.getElementById('savings').textContent = `$${savings.toFixed(2)}`;
+}
+
+    </script>
+</body>
+</html>

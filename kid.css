@@ -1,0 +1,201 @@
+*{
+
+    box-sizing: border-box;
+
+    margin: 0%;
+
+    padding: 0%;
+
+    text-decoration: none;
+
+}
+
+body {
+
+            font-family: Arial, sans-serif;
+
+            background-image: url("https://i.pinimg.com/736x/9a/55/68/9a556881ad592cca988e45ea7bc055f6.jpg");
+
+            background-position: center;
+
+            background-size: 100%;
+
+            color:#ddd;
+
+            text-align: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            font-family: "Protest Riot", sans-serif;
+
+            font-weight: 400;
+
+            font-style: normal;
+
+
+
+
+            
+
+        }
+
+        .container {
+
+            width: 100%;
+
+            margin: 0 auto;
+
+            padding: 20px;
+
+        
+
+
+
+
+        } 
+
+        h1 {
+
+            color: white;
+
+            margin-top: 20px;
+
+            font-size: 3em;
+
+        }
+
+         .Discover {
+
+            display: inline-block;
+
+            width: 65%;
+
+            margin: 20px;
+
+            background-color: transparent;
+
+            overflow: hidden;
+
+            
+
+           
+
+        } 
+
+        .Discover img {
+
+            width: 70%;
+
+            height: 500px;
+
+            border-bottom: 2px solid #ddd;
+
+            margin-top: 10px 10px 10px 10px;
+
+            border-radius: 20px;
+
+            border-style: solid;
+
+          
+
+        }
+
+        .Discover h2 {
+
+            color: black;
+
+            font-size: 2.5em;
+
+            margin: 10px 0;  
+
+        }
+
+        .Discover p {
+
+            color: white;
+
+            font-size: 2em;
+
+            padding: 0 10px 10px 10px;
+
+        }
+
+        .wrapper{
+
+            width: 120%;
+
+            justify-content: center;
+
+            align-items: center;
+
+         
+
+        }
+
+        
+
+    
+
+        nav{
+
+            width: 100%;
+
+            height: 100px;
+
+            background:linear-gradient(#d391b0,#ba6e8f);
+
+        }
+
+        ul li{
+
+            list-style: none;
+
+            display: inline-block;
+
+            line-height: 100px;
+
+        }
+
+        ul li a{
+
+            text-decoration: none;
+
+            font-size: 25px;
+
+            font-family: Arial;
+
+            color: black;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            margin: 10px;
+
+         
+
+            
+
+        }
+
+        ul li a:hover{
+
+            background-color:cornsilk;
+
+            box-shadow: 10px 10px 10px #dfb6b2;
+
+            border-radius: 10px;
+
+        }
+
+        h3{
+
+            color: brown;
+
+            justify-content: center; 
+
+        
+
+        }

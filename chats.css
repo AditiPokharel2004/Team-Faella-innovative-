@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    width: 80%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+ .post-section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd; 
+}
+
+.post-section {
+    border-bottom: none; 
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+ .posts {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 10px;
+    height: 300px; 
+    overflow-y: auto;
+}
+
+.messages {
+    margin-bottom: 10px;
+}
+
+ .post {
+    background-color: #e2e2e2;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+ .post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+ .post-form textarea {
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;}
+
+ .post-form button {
+    background-color: #aa8517;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chat-form button:hover, .post-form button:hover {
+    background-color: #0056b3;
+}

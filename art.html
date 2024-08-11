@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Creative Arts API</title>
+
+  <style>
+
+    body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #333;
+
+}
+
+
+
+
+header {
+
+    background: #f4f4f4;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+
+
+
+main {
+
+    padding: 20px;
+
+}
+
+
+
+
+#artworks {
+
+    margin-top: 20px;
+
+}
+
+
+
+
+.artwork {
+
+    border: 1px solid #ddd;
+
+    border-radius: 4px;
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+
+.artwork img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+
+
+footer {
+
+    background: #f4f4f4;
+
+    text-align: center;
+
+    padding: 10px;
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Creative Arts Showcase</h1>
+
+    </header>
+
+
+
+
+    <main>
+
+        <section id="artworks">
+
+            <h2>Artworks</h2>
+
+            <div id="artwork-list"></div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <footer>
+
+        <p>&copy; 2024 Creative Arts Showcase. All rights reserved.</p>
+
+    </footer>
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+
+
+const apiUrl = 'https://api.example.com/artworks'; 
+
+
+
+
+
+
+async function fetchArtworks() {
+
+    try {
+
+    
+
+        const response = await fetch(apiUrl);
+
+
+
+
+    
+
+        if (!response.ok) {
+
+            throw new Error('Network response was not ok');
+
+        }
+
+
+
+
+        const data = await response.json();
+
+
+
+
+      
+
+        displayArtworks(data);
+
+    } catch (error) {
+
+        console.error('There was a problem with the fetch operation:', error);
+
+    }
+
+}
+
+
+
+
+
+
+function displayArtworks(artworks) {
+
+    const artworkList = document.getElementById('artwork-list');
+
+
+
+
+    artworkList.innerHTML = '';
+
+
+
+
+   
+
+    artworks.forEach(artwork => {
+
+        const artworkDiv = document.createElement('div');
+
+        artworkDiv.classList.add('artwork');
+
+
+
+
+        const artworkTitle = document.createElement('h3');
+
+        artworkTitle.textContent = artwork.title;
+
+        
+
+        const artworkImage = document.createElement('img');
+
+        artworkImage.src = artwork.imageUrl;
+
+        artworkImage.alt = artwork.title;
+
+
+
+
+   
+
+        artworkDiv.appendChild(artworkTitle);
+
+        artworkDiv.appendChild(artworkImage);
+
+
+
+
+    
+
+        artworkList.appendChild(artworkDiv);
+
+    });
+
+}
+
+
+
+
+document.addEventListener('DOMContentLoaded', fetchArtworks);
+
+
+</script>
+</body>
+</html>

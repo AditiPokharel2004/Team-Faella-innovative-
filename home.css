@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url("https://i.pinimg.com/564x/29/ce/d5/29ced5ec3eadb81dc29d603af6fec46a.jpg");
+    background-position: center;
+    background-size: 70%;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.age-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.age-button {
+    display: inline-block;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.age-button:hover {
+    background-color: #45a049;
+}

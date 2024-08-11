@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Sign-Up Form</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <div class="signup-form">
+        <h1>Kids Sign-Up</h1>
+        <form action="submit_form.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required min="3" max="17">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="parent-email">Parent's Email:</label>
+                <input type="email" id="parent-email" name="parent_email" required>
+            </div>
+            <div class="form-group">
+                <label for="favorite-color">Favorite Color:</label>
+                <input type="text" id="favorite-color" name="favorite_color">
+            </div>
+            <div class="form-group">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I have my parent's permission to sign up.
+                </label>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

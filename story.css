@@ -1,0 +1,128 @@
+*{
+
+    box-sizing: border-box;
+
+    margin: 0%;
+
+    padding: 0%;
+
+}
+
+body {
+
+    font-family: 'Arial', sans-serif;
+
+    color: black;
+
+    line-height: 1.6;
+
+    background:linear-gradient(#b8cec2,#f8e6ce,#fdb3a4);
+
+ 
+
+    
+
+}
+
+header {
+
+ background-image: url("https://i.pinimg.com/736x/bc/3b/bc/bc3bbca5e329e47a12c478e884630ca6.jpg");
+
+    color:black;
+
+    padding: 10px 0;
+
+    text-align: center;
+
+
+
+
+}
+
+header h1 {
+
+    font-size: 2.5em;
+
+}
+
+nav {
+
+    text-align: center;
+
+    margin-top: 10px;
+
+}
+
+
+
+
+nav a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    padding: 10px;
+
+    display: inline-block;
+
+}
+
+nav a:hover {
+
+    background-color: #fdb3a4;
+
+    border-radius: 10px;
+
+}
+
+h2{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+h4{
+
+    text-align: center;
+
+}
+
+.container {
+
+    width: 100%;
+
+    margin: 20px ;
+
+    padding: 20px;
+
+    background:linear-gradient(#b8cec2,#f8e6ce,#fdb3a4);
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    column-gap: 10px;
+
+ 
+
+}
+
+.story img {
+
+    width: 700px;
+
+    height: 500px;
+
+    border-radius: 30px;
+
+}
+
